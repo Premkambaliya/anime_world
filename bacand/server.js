@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // MongoDB connection details
-const uri = "mongodb://localhost:27017"; 
+const uri = "mongodb+srv://Prem:Prem2007@cluster0.ewqmd.mongodb.net/"; 
 const dbName = "animeworld";
 
 // Middleware
