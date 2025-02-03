@@ -77,19 +77,5 @@ app.post('/anime', async (req, res) => {
   }
 });
 
-
-// ✅ 4. DELETE Anime by ID
-app.delete('/anime/:id', async (req, res) => {
-  try {
-    const anime = await Anime.findById(req.params.id);
-    if (!anime) return res.status(404).json({ message: 'Anime not found' });
-
-    await Anime.findByIdAndDelete(req.params.id);
-    res.json({ message: 'Anime deleted successfully' });
-  } catch (error) {
-    res.status(500).json({ message: 'Server error', error });
-  }
-});
-
 // Start Server
 app.listen(5000, () => console.log('Server running on port 5000'));
