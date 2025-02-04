@@ -2,7 +2,7 @@ const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // MongoDB connection details
 const uri = "mongodb+srv://Prem:Prem2007@cluster0.ewqmd.mongodb.net/"; 
@@ -23,9 +23,9 @@ async function initializeDatabase() {
         anime = db.collection("anime");
 
         // Start server after successful DB connection
-        app.listen(port, () => {
-            console.log(`Server running at http://localhost:${port}`);
-        });
+        // app.listen(port, () => {
+        //     console.log(`Server running at http://localhost:${port}`);
+        // });
     } catch (err) {
         console.error("Error connecting to MongoDB:", err);
         process.exit(1); // Exit if database connection fails
@@ -78,4 +78,4 @@ app.post('/anime', async (req, res) => {
 });
 
 // Start Server
-app.listen(5000, () => console.log('Server running on port 5000'));
+app.listen(port, () => console.log('Server running on port: ', port));
