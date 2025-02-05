@@ -8,7 +8,8 @@ import './index.css'
 // import Igotcheatskill from './components/igotcheatskill.jsx'
 // import Demonslayer from './components/demonslayer.jsx'
 // import Bluelock from './components/bluelock.jsx'
-import Viralhit from './components/viralhit.jsx'
+// import Viralhit from './components/viralhit.jsx'
+import Horimiya from './components/horimiya.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
     {/* <Igotcheatskill/> */}
     {/* <Demonslayer/> */}
     {/* <Bluelock/> */}
-    <Viralhit/>
+    {/* <Viralhit/> */}
+    <Horimiya/>
   </StrictMode>,
 )
