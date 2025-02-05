@@ -50,7 +50,8 @@
   }
   .slide1{
     height: 300px;
-    width: 150px;
+    /* width: 150px; */
+    min-width: 200px;
   }
   .slidediv{
     display: flex;
@@ -59,7 +60,13 @@
     overflow-x: scroll;
     scrollbar-width: none;
     height: 100%;
-    width: 200%;
+    width: 80%;
+  }
+  .outerslidediv{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
   }
   
   

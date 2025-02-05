@@ -32,7 +32,8 @@ const BeTheFirstToWatch = () => {
 
       <img className='backgroundphoto' src={backgroundphoto} alt="" />
 
-      <div className='slidediv'>
+     <div className='outerslidediv'>
+     <div className='slidediv'>
         <div className='slide1'>
           <img className='slide' src={A1} alt="" />
         </div>
@@ -64,6 +65,7 @@ const BeTheFirstToWatch = () => {
           <img className='slide' src={A10} alt="" />
         </div>
       </div>
+     </div>
 
 
 
