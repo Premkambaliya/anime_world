@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
 import axios from "axios";
-import "./viralhit.css"; // Importing CSS file
+import "./horimiya.css"; // Importing CSS file
 
-const viralhit = () => {
+const horimiya = () => {
   const [anime, setAnime] = useState(null);
 
   useEffect(() => {
     axios
-      .get("https://anime-world-1.onrender.com/anime/679a667dd4902dee19968a7f")
+      .get("https://anime-world-1.onrender.com/anime/679a667dd4902dee19968a80")
       .then((response) => {
         setAnime(response.data);
       })
@@ -24,7 +24,7 @@ const viralhit = () => {
     <div className="anime-detail-container">
       <div className="anime-content">
         <div className="anime-header">
-          <img src={`https://res.cloudinary.com/doqzxuxb1/image/upload/v1738731006/iyebwtcjf49dudvtusxg.png`} alt={anime.title} className="anime-image" />
+          <img src={`https://res.cloudinary.com/doqzxuxb1/image/upload/v1738731440/gi0efzc373siprrlygqm.png`} alt={anime.title} className="anime-image" />
           <h1 className="anime-title">{anime.title}</h1>
           <div className="icons">
             <AiFillHeart className="heart-icon" />
@@ -56,4 +56,4 @@ const viralhit = () => {
   );
 };
 
-export default viralhit;
+export default horimiya;
