@@ -4,18 +4,20 @@ import './index.css'
 
 // import App from './App.jsx'
 // import Sololeveling from './components/sololeveling.jsx'
-import Homepage from './components/homepage.jsx'
+// import Homepage from './components/homepage.jsx'
 // import Igotcheatskill from './components/igotcheatskill.jsx'
 // import Demonslayer from './components/demonslayer.jsx'
 // import Bluelock from './components/bluelock.jsx'
+import Viralhit from './components/viralhit.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
     {/* <Sololeveling /> */}
-    <Homepage />
+    {/* <Homepage /> */}
     {/* <Igotcheatskill/> */}
     {/* <Demonslayer/> */}
     {/* <Bluelock/> */}
+    <Viralhit/>
   </StrictMode>,
 )
