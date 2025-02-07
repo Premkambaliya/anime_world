@@ -30,7 +30,7 @@ const Igotcheatskill = () => {
         {/* Header Section */}
         <div className="text-center">
           <img
-            src="https://res.cloudinary.com/doqzxuxb1/image/upload/v1738658678/g8pgd3woetedkzwucupr.png"
+            src="https://res.cloudinary.com/doqzxuxb1/image/upload/v1738905341/jx6p2n5mpkavsyhk6gu6.png"
             alt={anime.title}
             className="w-full rounded-xl max-h-96 object-cover"
           />

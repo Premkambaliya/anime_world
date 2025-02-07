@@ -11,7 +11,7 @@ import A6 from '../assets/horimiya1.png';
 import A7 from '../assets/bluelock.png';
 import A8 from '../assets/demonslayer.png';
 import A9 from '../assets/viralhit.png';
-import A10 from '../assets/haikyu.png';
+import A10 from '../assets/Haikyuu.png';
 import feature from '../assets/feature.png';
 import makima from '../assets/makima.png';
 import backgroundphoto from '../assets/backgroundphoto.png';
