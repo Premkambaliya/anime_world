@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
 import axios from "axios";
-import "./classroom.css"; // Importing CSS file
 
 const classroom = () => {
   const [anime, setAnime] = useState(null);

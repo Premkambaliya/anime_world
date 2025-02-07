@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
 import axios from "axios";
-import "./horimiya.css"; // Importing CSS file
 
 const horimiya = () => {
   const [anime, setAnime] = useState(null);

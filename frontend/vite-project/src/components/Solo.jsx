@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
 import axios from "axios";
-import "./Sololeveling.css"; // Importing CSS file
-import photo from "../assets/a/a1.png"
 
 const Sololeveling = () => {
   const [anime, setAnime] = useState(null);
