@@ -30,7 +30,7 @@ const ViralHit = () => {
         {/* Header Section */}
         <div className="text-center">
           <img
-            src="https://res.cloudinary.com/doqzxuxb1/image/upload/v1738731006/iyebwtcjf49dudvtusxg.png"
+            src="https://res.cloudinary.com/doqzxuxb1/image/upload/v1738905271/dqgkhrou1pqdvaxajxgk.png"
             alt={anime.title}
             className="w-full rounded-xl max-h-96 object-cover"
           />

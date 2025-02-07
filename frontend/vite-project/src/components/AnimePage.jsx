@@ -1,6 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-// Importing anime images
+import { useNavigate } from 'react-router-dom';
 import A1 from '../assets/sololeveling.png';
 import A2 from '../assets/igot.png';
 import A3 from '../assets/classroom.png';
@@ -10,7 +9,7 @@ import A6 from '../assets/horimiya1.png';
 import A7 from '../assets/bluelock.png';
 import A8 from '../assets/demonslayer.png';
 import A9 from '../assets/viralhit.png';
-import A10 from '../assets/haikyu.png';
+import A10 from '../assets/Haikyuu.png';
 
 const AnimePage = () => {
   const navigate = useNavigate(); // Initialize useNavigate
