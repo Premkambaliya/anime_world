@@ -1,8 +1,8 @@
 import React from 'react';
-import download from '../assets/download.svg'
-import search from '../assets/search.svg';
-import save from '../assets/save.svg';
-import profile from '../assets/profile.svg';
+// import download from '../assets/download.svg'
+// import search from '../assets/search.svg';
+// import save from '../assets/save.svg';
+// import profile from '../assets/profile.svg';
 import A1 from '../assets/sololeveling.png';
 import A2 from '../assets/i got1.png';
 import A3 from '../assets/classroom.png';
@@ -18,17 +18,15 @@ import makima from '../assets/makima.png';
 import backgroundphoto from '../assets/backgroundphoto.png';
 
 import './homepage.css';
+import Navbar from './Navbar';
 
 const BeTheFirstToWatch = () => {
   return (
+    <>
+    <Navbar/>
     <div className="container">
 
-      <nav className="navbar">
-        <img src={search} alt="Search" className="nav-icon" />
-        <img src={download} alt="Download" className="nav-icon" />
-        <img src={save} alt="Save" className="nav-icon" />
-        <img src={profile} alt="Profile" className="nav-icon" />
-      </nav>
+      
 
       <img className='backgroundphoto' src={backgroundphoto} alt="" />
 
@@ -90,6 +88,7 @@ const BeTheFirstToWatch = () => {
         <button type="submit" className="button">Notify Me</button>
       </form> */}
     </div>
+    </>
   );
 };
 
