@@ -32,8 +32,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-gray-300 transition duration-300">
-                Contact
+              <Link to="/Aboutus" className="hover:text-gray-300 transition duration-300">
+              Aboutus
               </Link>
             </li>
           </ul>
