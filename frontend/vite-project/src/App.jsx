@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Home';
 import Navbar from './components/Navbar';
 import AnimePage from './components/AnimePage';
+import Aboutus from './components/Aboutus';
 import Solo from './components/Solo';
 import IGotCheatSkill from './components/IGotCheatSkill';
 import ClassroomOfTheElite from './components/Classroom';
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/AnimePage" element={<AnimePage />} /> {/* Anime Gallery */}
+        <Route path="/Aboutus" element={<Aboutus />} /> {/* Anime Gallery */}
         <Route path="/SoloLeveling" element={<Solo />} />
         <Route path="/IGotCheatSkillInAnotherWorld" element={<IGotCheatSkill />} />
         <Route path="/classroomOfTheElite" element={<ClassroomOfTheElite />} />
