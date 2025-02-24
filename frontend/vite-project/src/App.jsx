@@ -10,7 +10,7 @@ import ClassroomOfTheElite from './components/Classroom.jsx';
 import YourName from './components/YourName.jsx';
 import DaysWithMyStepSister from './components/DaysWithMy.jsx';
 import Horimiya from './components/Horimiya.jsx';
-import BlueLock from './components/BlueLock.jsx';
+import BlueLock from './components/BlueLockanime.jsx';
 import DemonSlayer from './components/DemonSlayer.jsx';
 import ViralHit from './components/ViralHitanime.jsx';
 import Haikyuu from './components/Haikyuu.jsx';
