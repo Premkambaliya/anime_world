@@ -4,6 +4,7 @@ import Homepage from './components/Home.jsx';
 import Navbar from './components/NavbarPage.jsx';
 import AnimePage from './components/AnimePage.jsx';
 import Aboutus from './components/Aboutus.jsx';
+import Genres from './components/Genres.jsx';
 import Solo from './components/Solo.jsx';
 import IGotCheatSkill from './components/IGot.jsx';
 import ClassroomOfTheElite from './components/Classroomanime.jsx';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/AnimePage" element={<AnimePage />} /> {/* Anime Gallery */}
         <Route path="/Aboutus" element={<Aboutus />} /> {/* Anime Gallery */}
+        <Route path="/genres" element={<Genres />} /> {/* Anime Gallery */}
         <Route path="/SoloLeveling" element={<Solo />} />
         <Route path="/IGotCheatSkillInAnotherWorld" element={<IGotCheatSkill />} />
         <Route path="/classroomOfTheElite" element={<ClassroomOfTheElite />} />
