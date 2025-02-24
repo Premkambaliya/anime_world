@@ -5,7 +5,7 @@ import Navbar from './components/NavbarPage.jsx';
 import AnimePage from './components/AnimePage.jsx';
 import Aboutus from './components/Aboutus.jsx';
 import Solo from './components/Solo.jsx';
-import IGotCheatSkill from './components/IGotCheatSkill.jsx';
+import IGotCheatSkill from './components/IGot.jsx';
 import ClassroomOfTheElite from './components/Classroom.jsx';
 import YourName from './components/YourName.jsx';
 import DaysWithMyStepSister from './components/DaysWithMy.jsx';
