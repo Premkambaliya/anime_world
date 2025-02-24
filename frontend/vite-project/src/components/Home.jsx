@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importing useNavigate for navigation
-import Navbar from './Navbar';
+import Navbar from './NavbarPage.jsx';
 import './Home.css'
 import A1 from '../assets/sololeveling.png';
 import A2 from '../assets/igot.png';

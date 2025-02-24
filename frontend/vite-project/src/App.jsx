@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Homepage from './components/Home';
-import Navbar from './components/Navbar';
-import AnimePage from './components/AnimePage';
-import Aboutus from './components/Aboutus';
-import Solo from './components/Solo';
-import IGotCheatSkill from './components/IGotCheatSkill';
-import ClassroomOfTheElite from './components/Classroom';
-import YourName from './components/YourName';
-import DaysWithMyStepSister from './components/DaysWithMy';
-import Horimiya from './components/Horimiya';
-import BlueLock from './components/BlueLock';
-import DemonSlayer from './components/DemonSlayer';
-import ViralHit from './components/ViralHitanime';
-import Haikyuu from './components/Haikyuu';
+import Homepage from './components/Home.jsx';
+import Navbar from './components/NavbarPage.jsx';
+import AnimePage from './components/AnimePage.jsx';
+import Aboutus from './components/Aboutus.jsx';
+import Solo from './components/Solo.jsx';
+import IGotCheatSkill from './components/IGotCheatSkill.jsx';
+import ClassroomOfTheElite from './components/Classroom.jsx';
+import YourName from './components/YourName.jsx';
+import DaysWithMyStepSister from './components/DaysWithMy.jsx';
+import Horimiya from './components/Horimiya.jsx';
+import BlueLock from './components/BlueLock.jsx';
+import DemonSlayer from './components/DemonSlayer.jsx';
+import ViralHit from './components/ViralHitanime.jsx';
+import Haikyuu from './components/Haikyuu.jsx';
 
 function App() {
   return (
