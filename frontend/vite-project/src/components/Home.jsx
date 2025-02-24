@@ -14,6 +14,8 @@ import A9 from '../assets/viralhit.png';
 import A10 from '../assets/Haikyuu.png';
 import feature from '../assets/feature.png';
 import makima from '../assets/makima.png';
+import img1 from '../assets/img1.png';
+import img2 from '../assets/img2.png';
 import backgroundphoto from '../assets/backgroundphoto.png';
 
 const Homepage = () => {
@@ -59,8 +61,8 @@ const Homepage = () => {
           onWheel={handleScroll}
         >
           {images.map((image, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="min-w-[160px] max-w-[200px] h-[280px] cursor-pointer" // Add cursor pointer to indicate clickable
               onClick={() => handleImageClick(image)} // Handle image click
             >
@@ -70,13 +72,29 @@ const Homepage = () => {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl font-bold my-8">Be the First to Watch</h1>
+        <h1 className="flex justify-evenly text-4xl font-bold my-8">Be the First to Watch</h1>
 
         {/* Feature and Makima Images */}
         <div className="flex justify-evenly pt-12">
           <img className="max-w-xs" src={feature} alt="Featured anime" />
           <img className="max-w-xs" src={makima} alt="Makima character" />
         </div>
+
+        
+        <div className="flex justify-evenly pt-12">
+          <div>
+            <img className="max-w-xs" src={img1} alt="Featured anime" />
+            <h3 className='flex justify-evenly pt-12'>FIRST ACCESS</h3>
+            <p><p>First access, early entry, and exclusive</p><p className='flex justify-evenly'>benefits at Anime World events</p></p>
+          </div>
+          <div>
+            <img className="max-w-xs" src={img2} alt="Makima character" />
+            <h3 className='flex justify-evenly pt-12'>WINNERS GIFT</h3>
+            <p className='flex justify-evenly'>Ultimate Winners recieve different Prices</p>
+          </div>
+        </div>
+
+
       </div>
     </>
   );
