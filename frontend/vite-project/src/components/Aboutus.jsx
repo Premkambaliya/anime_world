@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white p-10 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white p-10 flex flex-col items-center p-10 pt-24">
       
       <motion.h1 
         className="text-5xl font-extrabold text-center mb-10 text-red-400 neon-glow"
