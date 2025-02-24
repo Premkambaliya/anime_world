@@ -6,14 +6,14 @@ import AnimePage from './components/AnimePage.jsx';
 import Aboutus from './components/Aboutus.jsx';
 import Solo from './components/Solo.jsx';
 import IGotCheatSkill from './components/IGot.jsx';
-import ClassroomOfTheElite from './components/Classroom.jsx';
+import ClassroomOfTheElite from './components/Classroomanime.jsx';
 import YourName from './components/YourName.jsx';
 import DaysWithMyStepSister from './components/DaysWithMy.jsx';
-import Horimiya from './components/Horimiya.jsx';
+import Horimiya from './components/Horimiyaanime.jsx';
 import BlueLock from './components/BlueLockanime.jsx';
-import DemonSlayer from './components/DemonSlayer.jsx';
+import DemonSlayer from './components/DemonSlayeranime.jsx';
 import ViralHit from './components/ViralHitanime.jsx';
-import Haikyuu from './components/Haikyuu.jsx';
+import Haikyuu from './components/Haikyuuanime.jsx';
 
 function App() {
   return (
