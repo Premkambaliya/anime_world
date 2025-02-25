@@ -2,27 +2,26 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
 import axios from "axios";
+import Loader from "../components/Loader.jsx"; // Import Loader Component
 
-const Haikyuu = () => {
+const DaysWithMy = () => {
   const [anime, setAnime] = useState(null);
+  const [loading, setLoading] = useState(true); // Loader state
 
   useEffect(() => {
     axios
-      .get("https://anime-world-1.onrender.com/anime/67a308dd0acf5ba183fff30f")
+      .get("https://anime-world-1.onrender.com/anime/679a667dd4902dee19968a81")
       .then((response) => {
         setAnime(response.data);
+        setLoading(false); // Data milne ke baad loader hatao
       })
       .catch((error) => {
         console.error("Error fetching anime data:", error);
+        setLoading(false); // Error aaye toh bhi loader hatao
       });
   }, []);
 
-  if (!anime)
-    return (
-      <div className="flex justify-center items-center min-h-screen text-white text-xl">
-        Loading...
-      </div>
-    );
+  if (loading) return <Loader />; // Show Loader while fetching data
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#121212] px-5">
@@ -30,7 +29,7 @@ const Haikyuu = () => {
         {/* Header Section */}
         <div className="text-center">
           <img
-            src="https://res.cloudinary.com/doqzxuxb1/image/upload/v1738848273/qwafaatms8oupootx14h.png"
+            src="https://res.cloudinary.com/dczue3n9b/image/upload/v1740197863/qdivq5asa6wlyox53mv7.png"
             alt={anime.title}
             className="w-full rounded-xl max-h-96 object-cover"
           />
@@ -78,4 +77,4 @@ const Haikyuu = () => {
   );
 };
 
-export default Haikyuu;
+export default DaysWithMy;

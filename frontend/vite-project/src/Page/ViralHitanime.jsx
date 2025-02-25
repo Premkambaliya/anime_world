@@ -2,27 +2,26 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
 import axios from "axios";
+import Loader from "../components/Loader.jsx"; // Import Loader Component
 
-const classroomOfTheElite = () => {
+const ViralHit = () => {
   const [anime, setAnime] = useState(null);
+  const [loading, setLoading] = useState(true); // State for Loader
 
   useEffect(() => {
     axios
-      .get("https://anime-world-1.onrender.com/anime/67a3044c0acf5ba183fff30d")
+      .get("https://anime-world-1.onrender.com/anime/679a667dd4902dee19968a7f")
       .then((response) => {
         setAnime(response.data);
+        setLoading(false); // Stop loading once data is fetched
       })
       .catch((error) => {
         console.error("Error fetching anime data:", error);
+        setLoading(false); // Stop loading even if there's an error
       });
   }, []);
 
-  if (!anime)
-    return (
-      <div className="flex justify-center items-center min-h-screen text-white text-xl">
-        Loading...
-      </div>
-    );
+  if (loading) return <Loader />; // Show Loader while fetching
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#121212] px-5">
@@ -30,7 +29,7 @@ const classroomOfTheElite = () => {
         {/* Header Section */}
         <div className="text-center">
           <img
-            src="https://res.cloudinary.com/doqzxuxb1/image/upload/v1738738621/i1cfmhreevjinnkow7mw.png"
+            src="https://res.cloudinary.com/dczue3n9b/image/upload/v1740197864/jdtf1dge4zuqyhfzpu9i.png"
             alt={anime.title}
             className="w-full rounded-xl max-h-96 object-cover"
           />
@@ -78,4 +77,4 @@ const classroomOfTheElite = () => {
   );
 };
 
-export default classroomOfTheElite;
+export default ViralHit;

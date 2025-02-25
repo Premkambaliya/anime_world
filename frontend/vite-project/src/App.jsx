@@ -1,28 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import Navbar from './components/NavbarPage.jsx';
 import Homepage from './components/Home.jsx';
-import AnimePage from './components/AnimePage.jsx';
-import Aboutus from './components/Aboutus.jsx';
-import Genres from './components/Genres.jsx';
+import AnimeList from './components/Animepagelist.jsx';
+import About from './components/Aboutus.jsx';
 import Profile from './components/Profile.jsx';
-import Solo from './components/Solo.jsx';
-import IGotCheatSkill from './components/IGot.jsx';
-import ClassroomOfTheElite from './components/Classroomanime.jsx';
-import YourName from './components/YourName.jsx';
-import DaysWithMyStepSister from './components/DaysWithMy.jsx';
-import Horimiya from './components/Horimiyaanime.jsx';
-import BlueLock from './components/BlueLockanime.jsx';
-import DemonSlayer from './components/DemonSlayeranime.jsx';
-import ViralHit from './components/ViralHitanime.jsx';
-import Haikyuu from './components/Haikyuuanime.jsx';
+import Solo from './Page/Solo.jsx';
+import IGotCheatSkill from './Page/IGot.jsx';
+import ClassroomOfTheElite from './Page/Classroomanime.jsx';
+import YourName from './Page/YourName.jsx';
+import DaysWithMyStepSister from './Page/DaysWithMy.jsx';
+import Horimiya from './Page/Horimiyaanime.jsx';
+import BlueLock from './Page/BlueLockanime.jsx';
+import DemonSlayer from './Page/DemonSlayeranime.jsx';
+import ViralHit from './Page/ViralHitanime.jsx';
+import Haikyuu from './Page/Haikyuuanime.jsx';
+import Loader from './components/Loader.jsx'; // Import Loader
 
 function App() {
   const { isLoading } = useAuth0(); // Auth0 loading state
+  const [pageLoading, setPageLoading] = useState(true);
 
-  if (isLoading) {
-    return <div className="flex justify-center items-center h-screen text-2xl">Loading...</div>;
+  useEffect(() => {
+    setTimeout(() => setPageLoading(false), 2000); // Simulate page loading
+  }, []);
+
+  if (isLoading || pageLoading) {
+    return <Loader />;  // Show loader when Auth0 or page is loading
   }
 
   return (
@@ -30,9 +35,8 @@ function App() {
       <Navbar /> {/* Navbar will handle login/logout */}
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/AnimePage" element={<AnimePage />} />
-        <Route path="/Aboutus" element={<Aboutus />} />
-        <Route path="/genres" element={<Genres />} />
+        <Route path="/animeList" element={<AnimeList />} />
+        <Route path="/about" element={<About />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/SoloLeveling" element={<Solo />} />
         <Route path="/IGotCheatSkillInAnotherWorld" element={<IGotCheatSkill />} />
@@ -50,49 +54,3 @@ function App() {
 }
 
 export default App;
-
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Homepage from './components/Home.jsx';
-// import Navbar from './components/NavbarPage.jsx';
-// import AnimePage from './components/AnimePage.jsx';
-// import Aboutus from './components/Aboutus.jsx';
-// // import Signup from './components/Signup';
-// import Genres from './components/Genres.jsx';
-// import Solo from './components/Solo.jsx';
-// import IGotCheatSkill from './components/IGot.jsx';
-// import ClassroomOfTheElite from './components/Classroomanime.jsx';
-// import YourName from './components/YourName.jsx';
-// import DaysWithMyStepSister from './components/DaysWithMy.jsx';
-// import Horimiya from './components/Horimiyaanime.jsx';
-// import BlueLock from './components/BlueLockanime.jsx';
-// import DemonSlayer from './components/DemonSlayeranime.jsx';
-// import ViralHit from './components/ViralHitanime.jsx';
-// import Haikyuu from './components/Haikyuuanime.jsx';
-
-// function App() {
-//   return (
-//     <Router>
-//     <Navbar />
-//       <Routes>
-//         <Route path="/" element={<Homepage />} />
-//         <Route path="/AnimePage" element={<AnimePage />} /> {/* Anime Gallery */}
-//         <Route path="/Aboutus" element={<Aboutus />} /> {/* Anime Gallery */}
-//         <Route path="/genres" element={<Genres />} /> {/* Anime Gallery */}
-//         {/* <Route path="/Signup" element={<Signup />} />  */}
-//         <Route path="/SoloLeveling" element={<Solo />} />
-//         <Route path="/IGotCheatSkillInAnotherWorld" element={<IGotCheatSkill />} />
-//         <Route path="/classroomOfTheElite" element={<ClassroomOfTheElite />} />
-//         <Route path="/YourName" element={<YourName />} />
-//         <Route path="/DaysWithMyStepSister" element={<DaysWithMyStepSister />} />
-//         <Route path="/Horimiya" element={<Horimiya />} />
-//         <Route path="/BlueLock" element={<BlueLock />} />
-//         <Route path="/DemonSlayer" element={<DemonSlayer />} />
-//         <Route path="/ViralHit" element={<ViralHit />} />
-//         <Route path="/Haikyuu" element={<Haikyuu />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;

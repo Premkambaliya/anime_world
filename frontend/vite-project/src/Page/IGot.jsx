@@ -2,27 +2,26 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
 import axios from "axios";
+import Loader from "../components/Loader.jsx"; // Import Loader Component
 
-const Horimiya = () => {
+const Igotcheatskill = () => {
   const [anime, setAnime] = useState(null);
+  const [loading, setLoading] = useState(true); // Loader state
 
   useEffect(() => {
     axios
-      .get("https://anime-world-1.onrender.com/anime/679a667dd4902dee19968a80")
+      .get("https://anime-world-1.onrender.com/anime/6799e376d4902dee19968a7e")
       .then((response) => {
         setAnime(response.data);
+        setLoading(false); // Data milne ke baad loader hatao
       })
       .catch((error) => {
         console.error("Error fetching anime data:", error);
+        setLoading(false); // Error aaye toh bhi loader hatao
       });
   }, []);
 
-  if (!anime)
-    return (
-      <div className="flex justify-center items-center min-h-screen text-white text-xl">
-        Loading...
-      </div>
-    );
+  if (loading) return <Loader />; // Show Loader while fetching data
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#121212] px-5">
@@ -30,7 +29,7 @@ const Horimiya = () => {
         {/* Header Section */}
         <div className="text-center">
           <img
-            src="https://res.cloudinary.com/doqzxuxb1/image/upload/v1738731440/gi0efzc373siprrlygqm.png"
+            src="https://res.cloudinary.com/dczue3n9b/image/upload/v1740197868/prkes5tdqkobztembj5b.png"
             alt={anime.title}
             className="w-full rounded-xl max-h-96 object-cover"
           />
@@ -78,4 +77,4 @@ const Horimiya = () => {
   );
 };
 
-export default Horimiya;
+export default Igotcheatskill;
