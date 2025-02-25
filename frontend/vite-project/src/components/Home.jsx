@@ -85,7 +85,7 @@ const Homepage = () => {
           <div>
             <img className="max-w-xs" src={img1} alt="Featured anime" />
             <h3 className='flex justify-evenly pt-12'>FIRST ACCESS</h3>
-            <p><p>First access, early entry, and exclusive</p><p className='flex justify-evenly'>benefits at Anime World events</p></p>
+            <p><span>First access, early entry, and exclusive</span><span className='flex justify-evenly'>benefits at Anime World events</span></p>
           </div>
           <div>
             <img className="max-w-xs" src={img2} alt="Makima character" />
