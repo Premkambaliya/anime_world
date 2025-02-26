@@ -1,30 +1,51 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
+import { FaWhatsapp, FaInstagram, FaTelegram } from "react-icons/fa";
 import axios from "axios";
-import Loader from "../components/Loader.jsx"; // Import Loader Component
+import Loader from "../components/Loader.jsx";
 
 const Igotcheatskill = () => {
   const [anime, setAnime] = useState(null);
-  const [loading, setLoading] = useState(true); // Loader state
+  const [loading, setLoading] = useState(true);
+  const [likes, setLikes] = useState(Number(localStorage.getItem("likes_igotcheatskill")) || 0);
+  const [shares, setShares] = useState(Number(localStorage.getItem("shares_igotcheatskill")) || 0);
+  const [showSharePopup, setShowSharePopup] = useState(false);
+
+  const currentUrl = window.location.href; // Get current page URL
 
   useEffect(() => {
     axios
       .get("https://anime-world-1.onrender.com/anime/6799e376d4902dee19968a7e")
       .then((response) => {
         setAnime(response.data);
-        setLoading(false); // Data milne ke baad loader hatao
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching anime data:", error);
-        setLoading(false); // Error aaye toh bhi loader hatao
+        setLoading(false);
       });
   }, []);
 
-  if (loading) return <Loader />; // Show Loader while fetching data
+  // Like Button Function
+  const handleLike = () => {
+    const newLikes = likes + 1;
+    setLikes(newLikes);
+    localStorage.setItem("likes_igotcheatskill", newLikes);
+  };
+
+  // Share Button Function
+  const handleShare = () => {
+    const newShares = shares + 1;
+    setShares(newShares);
+    localStorage.setItem("shares_igotcheatskill", newShares);
+    setShowSharePopup(true);
+  };
+
+  if (loading) return <Loader />;
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#121212] px-5">
+    <div className="flex justify-center items-center min-h-screen bg-[#121212] px-5 relative">
       <div className="max-w-3xl bg-[#1e1e1e] rounded-xl p-6 shadow-lg">
         {/* Header Section */}
         <div className="text-center">
@@ -34,9 +55,24 @@ const Igotcheatskill = () => {
             className="w-full rounded-xl max-h-96 object-cover"
           />
           <h1 className="text-2xl font-bold text-white mt-4">{anime.title}</h1>
+
+          {/* Like & Share Buttons */}
           <div className="flex justify-center gap-4 mt-3">
-            <AiFillHeart className="text-2xl cursor-pointer text-white hover:text-red-500 transition duration-300" />
-            <AiOutlineShareAlt className="text-2xl cursor-pointer text-white hover:text-blue-500 transition duration-300" />
+            <button
+              onClick={handleLike}
+              className="flex items-center gap-1 text-white hover:text-red-500 transition duration-300"
+            >
+              <AiFillHeart className="text-2xl cursor-pointer" />
+              {likes > 0 && <span>{likes}</span>} {/* Sirf tab dikhayega jab like ho */}
+            </button>
+
+            <button
+              onClick={handleShare}
+              className="flex items-center gap-1 text-white hover:text-blue-500 transition duration-300"
+            >
+              <AiOutlineShareAlt className="text-2xl cursor-pointer" />
+              {shares > 0 && <span>{shares}</span>} {/* Sirf tab dikhayega jab share ho */}
+            </button>
           </div>
         </div>
 
@@ -73,6 +109,51 @@ const Igotcheatskill = () => {
           ></iframe>
         </div>
       </div>
+
+      {/* Share Pop-up */}
+      {showSharePopup && (
+        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+          <div className="bg-gray-900 p-6 rounded-xl shadow-lg text-center">
+            <h2 className="text-white text-lg font-semibold mb-4">Share This Anime</h2>
+
+            {/* Social Media Buttons */}
+            <div className="flex justify-center gap-4">
+              <a
+                href={`https://wa.me/?text=${encodeURIComponent(currentUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-500 text-3xl hover:text-green-400 transition duration-300"
+              >
+                <FaWhatsapp />
+              </a>
+              <a
+                href={`https://www.instagram.com/?url=${encodeURIComponent(currentUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-500 text-3xl hover:text-pink-400 transition duration-300"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href={`https://t.me/share/url?url=${encodeURIComponent(currentUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 text-3xl hover:text-blue-400 transition duration-300"
+              >
+                <FaTelegram />
+              </a>
+            </div>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setShowSharePopup(false)}
+              className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-500 transition duration-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
