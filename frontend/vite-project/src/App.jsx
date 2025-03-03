@@ -5,6 +5,7 @@ import Navbar from './components/NavbarPage.jsx';
 import Homepage from './components/Home.jsx';
 import AnimeList from './components/Animepagelist.jsx';
 import About from './components/Aboutus.jsx';
+import Event from './components/event2025.jsx';
 import Profile from './components/Profile.jsx';
 import Solo from './Page/Solo.jsx';
 import IGotCheatSkill from './Page/IGot.jsx';
@@ -37,6 +38,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/animeList" element={<AnimeList />} />
         <Route path="/about" element={<About />} />
+        <Route path="/event" element={<Event />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/SoloLeveling" element={<Solo />} />
         <Route path="/IGotCheatSkillInAnotherWorld" element={<IGotCheatSkill />} />

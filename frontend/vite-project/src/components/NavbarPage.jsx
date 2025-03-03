@@ -11,10 +11,15 @@ const Navbar = () => {
 
   useEffect(() => {
     const checkUserRegistration = async () => {
-      if (isAuthenticated && user && !userRegistered) {
+      if (isAuthenticated && user) {
         try {
-          const response = await fetch(`http://localhost:5000/user/${user.email}`);
-          if (response.status === 404) {
+          const response = await fetch(`http://localhost:5000/users/${user.email}`);
+          
+          if (response.ok) {
+            const data = await response.json();
+            console.log("User Profile:", data);
+            setUserRegistered(true);
+          } else if (response.status === 404) {
             // User not found, so register
             const registerResponse = await fetch("http://localhost:5000/register", {
               method: "POST",
@@ -25,23 +30,22 @@ const Navbar = () => {
                 picture: user.picture
               }),
             });
-            if (registerResponse.status === 201) {
+
+            if (registerResponse.ok) {
+              console.log("User registered successfully");
               setUserRegistered(true);
             }
-          } else if (response.status === 200) {
-            // User found
-            setUserRegistered(true);
           }
-          const data = await response.json();
-          console.log("User Profile:", data);
         } catch (error) {
           console.error("Error fetching profile:", error);
         }
       }
     };
 
-    checkUserRegistration();
-  }, [isAuthenticated, user, userRegistered]);
+    if (!userRegistered) {
+      checkUserRegistration();
+    }
+  }, [isAuthenticated, user]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -139,7 +143,7 @@ const Navbar = () => {
 
 // NavItem Component
 const NavItem = ({ to, text, mobile, onClick }) => (
-  <Link to={to}>
+  <Link to={to} onClick={onClick}>
     <motion.div
       whileHover={{
         scale: 1.1,
@@ -150,7 +154,6 @@ const NavItem = ({ to, text, mobile, onClick }) => (
       className={`cursor-pointer text-white font-semibold px-4 py-2 rounded-md ${
         mobile ? "text-center" : ""
       }`}
-      onClick={onClick}
     >
       {text}
     </motion.div>

@@ -77,6 +77,7 @@ const AboutUs = () => {
         </p>
       </motion.div>
     </div>
+    
   );
 };
 
@@ -108,3 +109,97 @@ const features = [
 ];
 
 export default AboutUs;
+
+
+
+
+
+// import React, { useState } from "react";
+// import { motion } from "framer-motion";
+
+// const AboutUs = () => {
+//   const [showEvent, setShowEvent] = useState(false);
+
+//   return (
+    // <div className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white p-10 flex flex-col items-center pt-30">
+    //   {/* Agar showEvent true hai to AnimeEvent Component dikhaye */}
+    //   {showEvent ? (
+    //     <AnimeEvent onBack={() => setShowEvent(false)} />
+    //   ) : (
+    //     <>
+    //       {/* Animated Heading */}
+    //       <motion.h1
+    //         initial={{ opacity: 0, y: -30 }}
+    //         animate={{ opacity: 1, y: 0 }}
+    //         transition={{ duration: 0.8, ease: "easeOut" }}
+    //         className="text-5xl md:text-6xl font-extrabold text-center mb-10 text-red-400 neon-glow"
+    //       >
+    //         About AnimeHub
+    //       </motion.h1>
+
+//           {/* Description Section */}
+//           <motion.p
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             transition={{ duration: 1, delay: 0.4 }}
+//             className="text-lg md:text-xl text-gray-300 max-w-3xl text-center mb-8"
+//           >
+//             AnimeHub is your one-stop platform for exploring and discovering
+//             your favorite anime.
+//           </motion.p>
+
+          // {/* Event Section with Clickable Navigation */}
+          // <div
+          //   className="mt-12 bg-gray-800 p-10 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300 cursor-pointer"
+          //   onClick={() => setShowEvent(true)} // Click karne par Event Page dikhaye
+          // >
+          //   <h3 className="text-xl font-semibold text-red-400">
+          //     Anime Event 2025
+          //   </h3>
+          //   <p className="text-gray-400 mt-2">
+          //     "Join us for this exciting upcoming event, packed with fun
+          //     activities and special surprises!"
+          //   </p>
+          // </div>
+//         </>
+//       )}
+//     </div>
+//   );
+// };
+
+// const AnimeEvent = ({ onBack }) => {
+//   return (
+//     <div className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white p-10 flex flex-col items-center pt-20">
+//       {/* Back Button */}
+//       <button
+//         onClick={onBack}
+//         className="absolute top-5 left-5 px-4 py-2 bg-red-500 hover:bg-red-700 rounded-lg text-white shadow-lg transition"
+//       >
+//         ← Back
+//       </button>
+
+//       {/* Animated Heading */}
+//       <motion.h1
+//         initial={{ opacity: 0, y: -20 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.8 }}
+//         className="text-5xl font-extrabold text-center mb-6 text-red-400 neon-glow"
+//       >
+//         Anime Event 2025 🎉
+//       </motion.h1>
+
+//       {/* Event Description */}
+//       <motion.p
+//         initial={{ opacity: 0 }}
+//         animate={{ opacity: 1 }}
+//         transition={{ duration: 1, delay: 0.3 }}
+//         className="text-lg md:text-xl text-gray-300 max-w-3xl text-center mb-8"
+//       >
+//         Get ready for the most exciting **Anime Event of 2025**! 🎊 Experience
+//         cosplay competitions, anime trivia, live screenings, and much more.
+//       </motion.p>
+//     </div>
+//   );
+// };
+
+// export default AboutUs;
