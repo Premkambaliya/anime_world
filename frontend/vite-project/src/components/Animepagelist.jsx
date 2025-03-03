@@ -123,18 +123,26 @@ import A7 from "../assets/bluelock.png";
 import A8 from "../assets/demonslayer.png";
 import A9 from "../assets/viralhit.png";
 import A10 from "../assets/Haikyuu.png";
+import A11 from "../assets/wind breacker 1.png";
+import A12 from "../assets/Black clover.png";
+import A13 from "../assets/KaijuNo8.png";
+import A14 from "../assets/JJK.png";
 
 const animeData = [
   { name: "Solo Leveling", genres: ["Action", "Fantasy"], route: "/SoloLeveling", image: A1 },
-  { name: "I Got Cheat Skill", genres: ["Fantasy", "Isekai"], route: "/IGotCheatSkillInAnotherWorld", image: A2 },
+  { name: "I Got Cheat Skill", genres: ["Fantasy", "Isekai","Adventure"], route: "/IGotCheatSkillInAnotherWorld", image: A2 },
   { name: "Classroom of the Elite", genres: ["Psychological", "School"], route: "/classroomOfTheElite", image: A3 },
   { name: "Your Name", genres: ["Romance", "Drama"], route: "/YourName", image: A4 },
   { name: "Days With My Step Sister", genres: ["Slice of Life", "Romance"], route: "/DaysWithMyStepSister", image: A5 },
   { name: "Horimiya", genres: ["Romance", "Comedy"], route: "/Horimiya", image: A6 },
-  { name: "Blue Lock", genres: ["Sports", "Psychological"], route: "/BlueLock", image: A7 },
-  { name: "Demon Slayer", genres: ["Action", "Fantasy"], route: "/DemonSlayer", image: A8 },
+  { name: "Blue Lock", genres: ["Sports", "Fantasy"], route: "/BlueLock", image: A7 },
+  { name: "Demon Slayer", genres: ["Action", "Fantasy", "Adventure"], route: "/DemonSlayer", image: A8 },
   { name: "Viral Hit", genres: ["Martial Arts", "Action"], route: "/ViralHit", image: A9 },
-  { name: "Haikyuu", genres: ["Sports", "School"], route: "/Haikyuu", image: A10 }
+  { name: "Haikyuu", genres: ["Action", "School","Comedy"], route: "/Haikyuu", image: A10 },
+  { name: "Black Clover", genres: ["Sports", "Adventure","Fantasy"], route: "/BlackClover", image: A11 },
+  { name: "Wind Breaker", genres: ["Action", "Adventure", "School"], route: "/WindBreaker", image: A12},
+  { name: "Kaiju No.8", genres: ["Action", "Fantasy", "Adventure"], route: "/KaijuNo8", image: A13 },
+  { name: "JuJUtsu Kaisen", genres: ["Action", "Fantasy","Supernatural"], route: "/JuJUtsuKaisen", image: A14 }
 ];
 
 const genres = ["All", "Action", "Fantasy", "Psychological", "Romance", "Slice of Life", "Sports", "Martial Arts", "Drama", "Comedy", "School", "Isekai", "Supernatural"];
