@@ -17,6 +17,10 @@ import BlueLock from './Page/BlueLockanime.jsx';
 import DemonSlayer from './Page/DemonSlayeranime.jsx';
 import ViralHit from './Page/ViralHitanime.jsx';
 import Haikyuu from './Page/Haikyuuanime.jsx';
+import BlackClover from './Page/BlackClover.jsx';
+import WindBreaker from './Page/WindBreaker.jsx';
+import KaijuNo8 from './Page/KaijuNo8.jsx';
+import JuJUtsuKaisen from './Page/Jjk.jsx';
 import Loader from './components/Loader.jsx'; // Import Loader
 
 function App() {
@@ -50,6 +54,10 @@ function App() {
         <Route path="/DemonSlayer" element={<DemonSlayer />} />
         <Route path="/ViralHit" element={<ViralHit />} />
         <Route path="/Haikyuu" element={<Haikyuu />} />
+        <Route path="/BlackClover" element={<BlackClover />} />
+        <Route path="/WindBreaker" element={<WindBreaker />} />
+        <Route path="/KaijuNo8" element={<KaijuNo8 />} />
+        <Route path="/JuJUtsuKaisen" element={<JuJUtsuKaisen />} />
       </Routes>
     </Router>
   );

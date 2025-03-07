@@ -16,7 +16,7 @@ const BlueLock = () => {
 
   useEffect(() => {
     axios
-      .get("https://anime-world-1.onrender.com/anime/6799bc27d4902dee19968a77")
+      .get("https://anime-world-1.onrender.com/anime/6799e376d4902dee19968a7e")
       .then((response) => {
         setAnime(response.data);
         setLoading(false);
