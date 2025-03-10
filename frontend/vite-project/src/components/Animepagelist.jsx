@@ -123,8 +123,8 @@ import A7 from "../assets/bluelock.png";
 import A8 from "../assets/demonslayer.png";
 import A9 from "../assets/viralhit.png";
 import A10 from "../assets/Haikyuu.png";
-import A11 from "../assets/wind breacker 1.png";
-import A12 from "../assets/Black clover.png";
+import A11 from "../assets/Black clover.png";
+import A12 from "../assets/wind breacker 1.png";
 import A13 from "../assets/KaijuNo8.png";
 import A14 from "../assets/JJK.png";
 
